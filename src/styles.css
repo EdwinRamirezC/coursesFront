@@ -1,11 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
-.navbarStyle{
+.navbarStyle {
   margin-top: 50px;
 }
-.space{
-  margin-left: 10px
+.space {
+  margin-left: 10px;
 }
-.main-container{
+.main-container {
   margin-top: 20px;
 }
 input[type="text"],
@@ -17,48 +16,39 @@ select.form-control {
   box-shadow: none;
   border-radius: 0;
 }
-
-select{
+select {
   background: #2c90e2;
-  color:#FFF;
-  text-shadow:0 1px 0 black;
+  color: #fff;
+  text-shadow: 0 1px 0 black;
 }
-
-/* Animaciones */
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
-
 .fast {
   -webkit-animation-duration: 0.4s;
   animation-duration: 0.4s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
-
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
 }
-
 .fadeIn {
   animation-name: fadeIn;
 }
-// radios span
 .credits {
   border: 2px solid gray;
-  background: #FFF;
+  background: #fff;
   border-radius: 25px;
 }
-// margin cards
-.marginCards{
+.marginCards {
   margin-top: 15px;
 }

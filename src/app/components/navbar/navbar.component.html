@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary " >
+  <div class="row">
+    <div class="col-md-12 offset-4">
+
+      <span class="navbar-brand" >Show me courses for </span>
+      <select name="professions" id="professions">
+        <option value="all">All professions</option>
+      </select>
+      <span class="navbar-brand space"> in </span>
+      <select name="states" id="states" class="blue">
+        <option value="all">All states</option>
+      </select>
+      <span class="navbar-brand space" > Clasified as </span>
+      <select name="clasification" id="clasification">
+        <option value="All states"> + </option>
+      </select>
+      <span class="navbar-brand space" > sorted by</span>
+      <select name="sorted" id="sorted">
+        <option value="popularity"> Popularity</option>
+      </select>
+    </div>
+  </div>
+  <div class="navbar-collapse collapse navbarStyle row">
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+              <a class="nav-link active" [routerLink]="['courses']" >COURSES</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link">EDUCATORS</a>
+          </li>
+      </ul>
+  </div>
+
+</nav>
