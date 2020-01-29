@@ -7,7 +7,7 @@ To install and run the project is recomended to follow the next steps
 1) download and install Git from https://git-scm.com/
 2) download the repository with the command line   
     **git clone https://github.com/EdwinRamirezC/coursesFront.git**
-3) install the dependencies tith the command line  
+3) install the dependencies with the command line  
     **npm install**
 4) star the test server with the command 
     **ng serve**
