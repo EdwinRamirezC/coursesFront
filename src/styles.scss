@@ -1,27 +1,86 @@
 /* You can add global styles to this file, and also import other style files */
-.navbarStyle{
-  margin-top: 50px;
+.bg-primary {
+  background-color: #4CA2F5 !important;
 }
+
+/*.navbarStyle{
+  margin-top: 50px;
+}*/
+
+.main-navbar {
+  padding: 2rem 0;
+}
+
+.second-navbar {
+  padding: 0 4rem;
+
+
+  ul.nav-list-courses {
+
+    .active {
+      border-bottom: 5px solid #fff;
+    }
+
+    a.nav-link {
+      margin-right: 1.5rem;
+      cursor: pointer;
+      
+      &:hover {
+        border-bottom: 5px solid #fff;
+      }
+    }
+    a.nav-link.active {
+      padding-left: unset !important;
+      padding-right: unset !important;
+    }
+
+
+  }
+}
+
 .space{
   margin-left: 10px
 }
 .main-container{
   margin-top: 20px;
 }
-input[type="text"],
-select.form-control {
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid #2c90e2;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  border-radius: 0;
+
+.searchbox {
+  padding: 0;
+
+  .input-group-text {
+    background: unset;
+    border: unset;
+    border-radius: unset;
+    border-bottom: 1px solid #2c90e2;
+
+    i {
+      color: #427AC4;
+    }
+  }
+  
+  input[type="text"],
+  select.form-control {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #2c90e2;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
 }
 
+
 select{
-  background: #2c90e2;
+  /*background: #2c90e2;
   color:#FFF;
-  text-shadow:0 1px 0 black;
+  text-shadow:0 1px 0 black;*/
+  background: #3A88F5;
+  color: #FFF;
+  text-shadow: 0 1px 0 black;
+  padding: 6px;
+  border-radius: 3px;
+  border-color: #7DB9FF;
 }
 
 /* Animaciones */
@@ -53,10 +112,31 @@ select{
   animation-name: fadeIn;
 }
 // radios span
-.credits {
-  border: 2px solid gray;
-  background: #FFF;
-  border-radius: 25px;
+
+.card-header {
+  .credits {
+    border: 1px solid gray;
+    background: #FFF;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 3px 10px;
+  }
+  
+  img.course-images {
+    position: absolute;
+    border-radius: 3px;
+    top: 8px;
+    left: 20px;
+    width: 57px;
+  }
+}
+
+.card-body {
+  h5 {
+    margin-top: 10px;
+    font-size: 15px;
+  }
 }
 // margin cards
 .marginCards{

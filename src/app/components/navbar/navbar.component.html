@@ -1,7 +1,6 @@
-<nav class="navbar navbar-expand-sm navbar-dark bg-primary " >
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary main-navbar" >
   <div class="row">
     <div class="col-md-12 offset-4">
-
       <span class="navbar-brand" >Show me courses for </span>
       <select name="professions" id="professions">
         <option value="all">All professions</option>
@@ -20,8 +19,10 @@
       </select>
     </div>
   </div>
-  <div class="navbar-collapse collapse navbarStyle row">
-      <ul class="navbar-nav ml-auto">
+</nav>
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary second-navbar">
+  <div class="navbar-collapse collapse">
+      <ul class="navbar-nav ml-auto nav-list-courses">
           <li class="nav-item">
               <a class="nav-link active" [routerLink]="['courses']" >COURSES</a>
           </li>

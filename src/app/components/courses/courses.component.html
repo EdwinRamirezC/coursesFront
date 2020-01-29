@@ -1,25 +1,44 @@
 <div class="row">
   <div class="col-md-12">
-    <div class="form-group col-md-3">
-      <input type="text" name="search" class="form-control" id="search" value="" placeholder="Search all courses">
+    <div class="form-group col-md-6 searchbox">
+      <div class="input-group mb-2">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <i class="fa fa-search"></i>
+          </div>
+        </div>
+        <input type="text" name="search" class="form-control" id="search" value="" placeholder="Search all courses">
+      </div>
     </div>
   </div>
 </div>
-<div class="row">
-  <div class="col-md-4" *ngFor="let item of courses">
-    <div class="card marginCards"  >
-      <div class="card-header"> <span class="col-md-6 offset-7 credits">3 CREDITS</span></div>
+<div class="search-results" infinite-scroll [infiniteScrollDistance] = "2" [infiniteScrollThrottle]= "50" (scrolled)="onScroll()">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let item of courses">
+      <div class="card marginCards"  >
+        <div class="card-header text-right">
+          <img [src]="item.imageUrl" class="course-images" >
+          <span class="credits">3 CREDITS</span>
+        </div>
 
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">It's a broader card with text below as a natural lead-in to extra content. This content is a little longer.</p>
-        <div class="row">
-          <div class="col-md-6">Precio</div>
-          <div class="col-md-6">Rating</div>
+        <div class="card-body">
+          <h5 class="card-title">{{ item.name }}</h5>
+          <p class="card-text">{{ item.description }}</p>
+          <div class="row">
+            <div class="col-md-6">{{ item.price | currency }}</div>
+            <div class="col-md-6">
+              <star-rating [value]="item.rating" totalstars="5" checkedcolor="gold" uncheckedcolor="gray" size="24px" readonly="true" (rate)="onRate($event)"></star-rating>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+<div class="row pb-5">
+    <div class="col-md-12 p-5">
+      <ngx-spinner bdColor = "" bdOpacity="0.9" size = "default" color="#581f87" type = "ball-pulse-sync" [fullScreen]="false" ></ngx-spinner>
+    </div>
 </div>
 
 
